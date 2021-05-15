@@ -1,0 +1,106 @@
+
+
+server {
+    listen 80 default_server;
+    listen [::]:80 default_server ipv6only=on;
+
+    root /var/www/html/wordpress;
+    index index.php index.html index.htm;
+
+    server_name escolamaisdiversa.cieds.org.br;
+    server_name escolamaisdiversa.cieds.org.br;
+
+    # rewrite ^/sitemap(-+([a-zA-Z0-9_-]+))?\.xml$ "/index.php?xml_sitemap=params=$2" last;
+    # rewrite ^/sitemap(-+([a-zA-Z0-9_-]+))?\.xml\.gz$ "/index.php?xml_sitemap=params=$2;zip=true" last;
+    # rewrite ^/sitemap(-+([a-zA-Z0-9_-]+))?\.html$ "/index.php?xml_sitemap=params=$2;html=true" last;
+    # rewrite ^/sitemap(-+([a-zA-Z0-9_-]+))?\.html.gz$ "/index.php?xml_sitemap=params=$2;html=true;zip=true" last;
+
+    client_max_body_size 10M;
+
+    if ($http_user_agent ~* "^python") {
+         return 403;
+    }
+
+    set $skip_cache 0;
+
+    # POST requests and urls with a query string should always go to PHP
+    if ($request_method = POST) {
+        set $skip_cache 1;
+    }
+
+    if ($query_string != "") {
+        set $skip_cache 1;
+    }
+
+    # Don't cache uris containing the following segments
+    if ($request_uri ~* "/wp-admin/|/xmlrpc.php|wp-.*.php|/feed/|index.php|sitemap(_index)?.xml") {
+        set $skip_cache 1;
+    }
+
+    # Don't use the cache for logged in users or recent commenters
+    if ($http_cookie ~* "comment_author|wordpress_[a-f0-9]+|wp-postpass|wordpress_no_cache|wordpress_logged_in") {
+        set $skip_cache 1;
+    }
+
+    location ~ ^/(sitemap.xml) {
+        root /var/www/html/wordpress;
+    }
+
+    location ~ \.php$ {
+        include snippets/fastcgi-php.conf;
+
+        # With php7.0-cgi alone:
+        # fastcgi_pass 127.0.0.1:9000;
+
+        # With php7.0-fpm:
+        fastcgi_pass unix:/run/php/php7.0-fpm.sock;
+
+	# fastcgi_cache WORDPRESS;
+	# fastcgi_cache_valid 200 60m;
+
+    }
+
+
+    location = /favicon.ico {
+        log_not_found off;
+        access_log off;
+    }
+
+    location = /robots.txt {
+        allow all;
+        log_not_found off;
+        access_log off;
+    }
+
+    # Suporte ao Permalink
+    location / {
+        try_files $uri $uri/ /index.php?$args;
+    }
+
+
+    location ~* \.(eot|ttf|woff|woff2)$ {
+        add_header Access-Control-Allow-Origin *;
+    }
+
+    location ~* .(ogg|ogv|svg|svgz|eot|otf|woff|woff2|mp4|ttf|css|rss|atom|js|jpg|jpeg|gif|png|ico|zip|tgz|gz|rar|bz2|doc|xls|exe|ppt|tar|mid|midi|wav|bmp|rtf)$ {
+        expires max;
+        log_not_found off;
+        access_log off;
+    }
+
+    # Gzip Settings
+    gzip on;
+    gzip_disable "msie6";
+    gzip_vary on;
+    gzip_proxied any;
+    gzip_comp_level 6;
+    gzip_buffers 16 8k;
+    gzip_http_version 1.1;
+    gzip_types text/plain text/css application/json application/javascript text/xml application/xml application/xml+rss text/javascript image/svg+xml;
+    gzip_disable "MSIE [1-6]\.(?!.*SV1)";
+
+    proxy_connect_timeout 600;
+    proxy_send_timeout 600;
+    proxy_read_timeout 600;
+    send_timeout 600;
+}
