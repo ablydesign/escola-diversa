@@ -7,16 +7,13 @@
         </div>
         <div class="atividade-competncias_list">
           <div class="content">
-            <p>
-              <?= block_field('atividade-competncias_list'); ?>
-              <a href="javascript:void(0);" class="tooltip" title="<?= block_field('atividade-competncias_tooltip'); ?>"><i class='bx bx-info-circle'></i></a>
-            </p>
+            <p><?= block_field('atividade-competncias_list'); ?><a href="javascript:void(0);" class="tooltip" title="<?= block_field('atividade-competncias_tooltip'); ?>"><i class='bx bx-info-circle'></i></a></p>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div id="atividade-competncias_infor" style="display: none;">
-    <?= block_field('atividade-competncias_tooltip'); ?>
+    <?= block_field('atividade-competncias_infor'); ?>
   </div>
 </div>
