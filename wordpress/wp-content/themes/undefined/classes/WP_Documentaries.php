@@ -54,6 +54,7 @@ class WP_Documentaries {
     $infor['permalink'] = get_permalink($post_id);
     $infor['class']     = ($i % 2 == 0) ? 'even' : 'odd';
     $infor['class_options']  = (empty($infor['thumb'])) ? 'no-thumb' : 'has-thumb';
+    $infor['anchor']    = get_field('documentaries_anchora', $post_id);
 
 		return $infor;
 	}

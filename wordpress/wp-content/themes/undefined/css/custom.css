@@ -1,0 +1,26 @@
+.fixed-left-bottom {
+  left: auto;
+  right: 15px;
+}
+
+.fixed-left-bottom .btn.btn-purple.btn-purple_outline {
+  border-color: #F26B18;
+  color: #F26B18;
+}
+
+.fixed-left-bottom .btn.btn-purple.btn-purple_outline:hover {
+  background-color: #F26B18;
+  color: #fff;
+}
+
+#page-ideas .ideas-column.column.even.resultado.first-of-type .ideas-item {
+  margin-top: 15px;
+}
+
+#page-ideas .ideas-column.column.even.resultado.first-of-type {
+  padding-top: 50px;
+}
+
+.fancybox-ajax-container .fancybox-ajax-content .fancybox-content .container {
+  max-width: 100%;
+}

@@ -196,6 +196,7 @@ class WP_MyFunctions {
 	public static function add_styles(){
 		wp_enqueue_style( 'theme-css-font', (self::$theme_url . '/fonts/all.css'), array(), filemtime(self::$theme_path . '/fonts/all.css') );
 		wp_enqueue_style( 'theme-css-main', (self::$theme_url . '/css/main.min.css'), array(), filemtime(self::$theme_path . '/css/main.min.css') );
+		wp_enqueue_style( 'theme-css-custom', (self::$theme_url . '/css/custom.css'), array(), filemtime(self::$theme_path . '/css/custom.css') );
 		wp_enqueue_style( 'theme-css', get_stylesheet_uri(),  array(), filemtime( get_stylesheet_directory() ) );
 	}
 
