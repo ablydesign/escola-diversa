@@ -29,6 +29,7 @@
 
 .single-wp_ideas .section.section-single .download p a {
   color: #F2B704;
+  text-decoration: none;
 }
 
 .single-wp_ideas .section.section-single .download .icon{
@@ -41,6 +42,10 @@
   border-radius: 50%;
   line-height: 60px;
   text-align: center;
+}
+
+.single-wp_ideas .section.section-single .download .icon i {
+  font-size: 24px;
 }
 
 #page-ideas .ideas-column.column.even.resultado.first-of-type .ideas-item {
