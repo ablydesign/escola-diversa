@@ -13,6 +13,31 @@
   color: #fff;
 }
 
+.single-wp_ideas .section.section-single .authors {
+  margin-bottom: 15px;
+}
+
+.single-wp_ideas .section.section-single .download {
+  margin-bottom: 50px;
+}
+
+.single-wp_ideas .section.section-single .download p {
+  margin: 0;
+  color: #F2B704;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.single-wp_ideas .section.section-single .download .icon{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  background-color: rgba(242, 183, 4, 0,1);
+  margin-right: 10px;
+  
+}
+
 #page-ideas .ideas-column.column.even.resultado.first-of-type .ideas-item {
   margin-top: 15px;
 }
