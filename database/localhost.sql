@@ -21,8 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `ablydesi_escola`
 --
-CREATE DATABASE IF NOT EXISTS `ablydesi_escola` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `ablydesi_escola`;
+-- CREATE DATABASE IF NOT EXISTS `ablydesi_escola` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+-- USE `ablydesi_escola`;
 
 -- --------------------------------------------------------
 
