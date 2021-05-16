@@ -22,7 +22,7 @@
           </span>
         </p>
       </div>
-      <?php if (get_field('idea_post__download', get_the_ID()) || true) : ?>
+      <?php if (get_field('idea_post__download', get_the_ID())) : ?>
         <div class="download">
           <p>
             <a href="<?= get_field('idea_post__download', $post_id); ?>" target="_blank">
