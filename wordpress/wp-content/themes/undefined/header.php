@@ -28,6 +28,15 @@
 	<meta name="msapplication-TileImage" content="<?= WP_MyTheme::get_brand('icon'); ?>">
 	<meta name="msapplication-TileColor" content="#1d7d74">
 
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-C9R8Q86CG4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-C9R8Q86CG4');
+	</script>
+
 	<link inline rel="stylesheet" href="<?= WP_MyFunctions::$theme_url; ?>/css/inline.min.css">
 	<?php WP_MyFunctions::add_styles(); ?>
 	<?php wp_head(); ?>
