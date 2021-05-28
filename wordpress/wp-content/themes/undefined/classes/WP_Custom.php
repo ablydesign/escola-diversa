@@ -450,7 +450,7 @@ class WP_Custom {
       $out .= '</div>';
       $out .= '<div class="page-file_button">';
         $out .= '<div class="row justify-content-center">';
-          $out .= '<a href="'.$file_1.'" target="_blank" class="btn btn-download"><i class="bx bx-download"></i> <span>Download kit completo</span></a>';
+          $out .= '<a href="'.$file_1.'" target="_blank" class="btn btn-download ga-download-jogo"><i class="bx bx-download"></i> <span>Download kit completo</span></a>';
         $out .= '</div>';
         /*
         $out .= '<div class="row justify-content-center">';
