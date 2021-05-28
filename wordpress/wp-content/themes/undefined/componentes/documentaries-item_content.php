@@ -9,7 +9,7 @@
       </div>
       <div class="title">
         <h3><?= $attr['title']; ?></h3>
-        <a href="<?= $attr['file']; ?>" class="btn btn-download">Baixar video <i class="icon icon-download"></i></a>
+        <a href="<?= $attr['file']; ?>" class="btn btn-download <?= $attr['class_link']; ?>">Baixar video <i class="icon icon-download"></i></a>
       </div>
       <div class="text excerpt">
         <div class="text-inner">

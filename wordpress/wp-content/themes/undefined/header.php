@@ -28,6 +28,16 @@
 	<meta name="msapplication-TileImage" content="<?= WP_MyTheme::get_brand('icon'); ?>">
 	<meta name="msapplication-TileColor" content="#1d7d74">
 
+	<!-- Google Tag Manager -->
+	<script>
+		(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-T3G97P8');
+	</script>
+	<!-- End Google Tag Manager -->
+
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-C9R8Q86CG4"></script>
 	<script>
@@ -41,7 +51,10 @@
 	<?php WP_MyFunctions::add_styles(); ?>
 	<?php wp_head(); ?>
 </head>
-	<body <?php body_class('nav-fixed'); ?> itemscope itemtype="https://schema.org/WebPage">
+	<body <?php body_class('nav-fixed'); ?> itemscope itemtype="https://schema.org/WebPage">		
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3G97P8" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+		<!-- End Google Tag Manager (noscript) -->
 		<header id="header" class="header" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
 			<div class="container">
 				<div class="row header-inner-row justify-content-between">

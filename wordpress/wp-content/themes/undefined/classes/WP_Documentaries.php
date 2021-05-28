@@ -56,6 +56,8 @@ class WP_Documentaries {
     $infor['class_options']  = (empty($infor['thumb'])) ? 'no-thumb' : 'has-thumb';
     $infor['anchor']    = get_field('documentaries_anchora', $post_id);
 
+    $infor['class_link'] = 'ga-download-episodio' . $i;
+
 		return $infor;
 	}
 
@@ -97,6 +99,7 @@ class WP_Documentaries {
     $attr = self::get_infor($destaque, 0);
 
     $attr['class'] = "col-md-12";
+    $attr['class_link'] = "ga-download-principal";
 
     $out .= WP_MyFunctions::get_component_template('documentaries-item_destaque', $attr);
 
