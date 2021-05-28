@@ -12,7 +12,7 @@
         </div>
         <?php if (!empty(get_field('atividade-download_arquivo'))) :?>
           <div class="atividade-download_arquivo">
-            <p><a href="<?= get_field('atividade-download_arquivo'); ?>" target="_blank"><span class="icon"><i class="bx bx-download"></i></span>Fazer download da atividade</a></p>
+            <p><a href="<?= get_field('atividade-download_arquivo'); ?>" target="_blank" class="ga-download-atividade ga-download-atividade<?= get_the_ID();?>"><span class="icon"><i class="bx bx-download"></i></span>Fazer download da atividade</a></p>
           </div>
         <?php endif; ?>
       </div>
