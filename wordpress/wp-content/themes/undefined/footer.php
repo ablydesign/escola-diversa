@@ -1,7 +1,8 @@
 		<footer class="footer">
 			<div class="copyright">
 				<div class="container">
-					<p>©‎ 2021. Escola +Diversa, um produto CIEDS, Centro Integrado de Estudos e Programas de Desenvolvimento Sustentável</p>
+					<p>©‎ <?php echo date('Y')?>. Escola +Diversa, um produto CIEDS, Centro Integrado de Estudos e Programas de Desenvolvimento Sustentável</p>
+					<p><a href="https://www.cieds.org.br/docs/Pol%C3%ADtica_de_Privacidade_-_Plataformas.pdf" target="_blank">Ver Política de Privacidade</a></p>
 				</div>
 			</div>
 		</footer>
