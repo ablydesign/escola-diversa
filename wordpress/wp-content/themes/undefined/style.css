@@ -21,6 +21,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 #cookie-law-info-bar_container p {
   font-size: 16px;
   text-align: left;
+  margin: 0;
 }
 
 #cookie-law-info-bar_container p a {
@@ -46,7 +47,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 #cookie-law-info-bar_container .cli_action_button {
   display: inline-block;
-  padding: 18px 20px;
+  padding: 15px 20px;
   color: #fff;
   border-radius: 50px;
   text-decoration: none;
